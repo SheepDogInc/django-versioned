@@ -42,8 +42,8 @@ Subclass ```django_versioned.interfaces.VersionInterface```, and implement the
 class (which should also inherit from VersionInterface).  Currently, the
 following interfaces are built:
 
-* django_versioned.interfaces.VersionInterface -- The base class
-* django_versioned.interfaces.GitInterface -- Grabs the version as the current
+* ```django_versioned.interfaces.VersionInterface``` -- The base class
+* ```django_versioned.interfaces.GitInterface``` -- Grabs the version as the current
   branch, no set supported
-* django_versioned.interfaces.FileInterface -- Gets/Sets the version according to
+* ```django_versioned.interfaces.FileInterface``` -- Gets/Sets the version according to
   VERSION_FILE in settings.py, with GitInterface as a fallback.
