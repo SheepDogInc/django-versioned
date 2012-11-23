@@ -11,7 +11,7 @@ The version number will look something akin to the following:
 
 ## Management Commands
 
-There are two management commands, setversion and getversion.  These map through
+There are two management commands, ```setversion``` and ```getversion```.  These map through
 to interfaces (see ```interfaces.py```) and either get data or write data from
 wherever the interface tells them to.
 
