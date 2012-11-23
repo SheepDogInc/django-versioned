@@ -5,14 +5,14 @@ def long_description(source):
         return f.read()
 
 setup(
-    name = "django_version",
-    version = "0.1",
+    name = "django_versioned",
+    version = "0.2",
     author = "Sheepdog",
     author_email = "development@sheepdoginc.ca",
     description = ("Django Versioning App"),
     license = "BSD",
     keywords = "verisoning",
-    url = "https://github.com/SheepDogInc/django-versioning",
+    url = "https://github.com/SheepDogInc/django-versioned",
     packages=find_packages(),
     long_description=long_description("README.markdown"),
     include_package_data=True,
