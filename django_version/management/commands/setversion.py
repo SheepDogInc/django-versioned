@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from optparse import make_option
-from sheepdog.version import get_version_file_w
+from django_version.interfaces import FileVersion
+from django.conf import settings
 
 class Command(BaseCommand):
     args = '<version number>'
@@ -42,7 +43,7 @@ class Command(BaseCommand):
             
         version += '\n'
         
-        with get_version_file_w() as f:
-            f.write(version)
+        version_class = getattr(settings, 'VERSION_INTERFACE', FileVersion)
+        version_class().set_version(version)
             
         return version
