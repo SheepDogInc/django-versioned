@@ -6,12 +6,12 @@ def long_description(source):
 
 setup(
     name = "django_versioned",
-    version = "0.2",
+    version = "0.3",
     author = "Sheepdog",
     author_email = "development@sheepdoginc.ca",
     description = ("Django Versioning App"),
     license = "BSD",
-    keywords = "verisoning",
+    keywords = "versioning django versioned",
     url = "https://github.com/SheepDogInc/django-versioned",
     packages=find_packages(),
     long_description=long_description("README.markdown"),
@@ -20,9 +20,8 @@ setup(
         [
             "Environment :: Web Environment",
             "Framework :: Django",
-            "License :: OSI Approved :: BSD License",
+            "License :: BSD License",
             "Operating System :: OS Independent",
-            "Programming Language :: Python :: 2.6",
             "Programming Language :: Python :: 2.7",
             "Topic :: Internet :: WWW/HTTP",
             "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
