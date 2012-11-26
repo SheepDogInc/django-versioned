@@ -36,10 +36,10 @@ class VersionInterface(object):
             return self.process_exception(e, 'get_version')
 
     def process_exception(self, exception, method, *args):
-            if self.fallback_interface is not None:
-                return getattr(self.fallback_interface(), method)(*args)
-            else:
-                raise exception
+        if self.fallback_interface is not None:
+            return getattr(self.fallback_interface(), method)(*args)
+        else:
+            raise exception
 
 
 class GitVersion(VersionInterface):
@@ -76,9 +76,4 @@ class FileVersion(VersionInterface):
             f.write(version)
 
 
-class AppEngineVersion(VersionInterface):
-    """
-    Grabs the version either out of cache or out of the datastore if it isn't
-    already in there.
-    """
 
