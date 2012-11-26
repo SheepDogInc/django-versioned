@@ -33,6 +33,9 @@ VERSION_FILE = ''
 
 # What interface we're to use
 VERSION_INTERFACE = 'django_versioned.interfaces.FileVersion'
+
+# Appengine Specific, whether to delete old versions from the datastore
+APPENGINE_DELETE = True
 ```
 
 ## Extending an Interface
