@@ -1,12 +1,11 @@
 from setuptools import setup, find_packages
+import os
 
-def long_description(source):
-    with open(source, 'r') as f:
-        return f.read()
+VERSION = os.getenv('VERSION', '0.3')
 
 setup(
     name = "django_versioned",
-    version = "0.3",
+    version = VERSION,
     author = "Sheepdog",
     author_email = "development@sheepdoginc.ca",
     description = ("Django Versioning App"),
@@ -14,7 +13,6 @@ setup(
     keywords = "versioning django versioned",
     url = "https://github.com/SheepDogInc/django-versioned",
     packages=find_packages(),
-    long_description=long_description("README.markdown"),
     include_package_data=True,
     classifiers=
         [
